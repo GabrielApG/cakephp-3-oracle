@@ -120,7 +120,7 @@ class OracleSchema extends BaseSchema
                     $field = ['type' => 'boolean', 'length' => null];
                 } else {
                     if ($row['DATA_SCALE'] > 0) {
-                        $field = ['type' => 'decimal', 'length' => $row['DATA_PRECISION'], 'precision' => $row['DATA_SCALE']];
+                        $field = ['type' => 'integer', 'length' => $row['DATA_PRECISION'], 'precision' => $row['DATA_SCALE']];
                     } else {
                         $field = ['type' => 'integer', 'length' => $row['DATA_PRECISION']];
                     }
